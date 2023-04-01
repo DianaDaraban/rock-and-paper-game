@@ -1,0 +1,205 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Yantramanav', sans-serif;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.hide{
+    visibility: hidden;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 15%, rgba(62, 14, 66, 0.10) ), url(./img/back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.elements-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+
+
+.rock, .paper, .scissors{
+    width: 250px;
+    height: 250px;
+    background-color: rgb(143, 78, 78);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+}
+
+.rock::after{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    content: '';
+    top: 0;
+    left: 0;
+    background-image: url(./img/rock.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 5;
+    box-shadow: 0px 0px 5px 3px rgba(38, 39, 39, 0.322);
+}
+
+.rock::before{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.13);
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0px 0px 10px 5px rgba(15, 58, 71, 0.2);
+}
+
+.paper::after{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    content: '';
+    top: 0;
+    left: 0;
+    background-image: url(./img/paper.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 5;
+    box-shadow: 0px 0px 5px 3px rgba(38, 39, 39, 0.322);
+}
+
+.paper::before{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.13);
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0px 0px 10px 5px rgba(15, 58, 71, 0.2);
+}
+.scissors::after{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    content: '';
+    top: 0;
+    left: 0;
+    background-image: url(./img/scissors.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    z-index: 5;
+    box-shadow: 0px 0px 5px 3px rgba(38, 39, 39, 0.322);
+}
+
+.scissors::before{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    content: '';
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transform: scale(1.13);
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0px 0px 10px 5px rgba(15, 58, 71, 0.2);
+}
+
+.text-el{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.35);
+
+}
+
+.message{
+    font-size: 3.5rem;
+    color: rgb(252, 185, 61);
+}
+
+.score{
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.151);
+    padding: 0 .3em 0 0.3em;
+    border-radius: 25px;
+}
+
+.restart-btn{
+    margin-top: 1.5em;
+    font-size: 2.5rem;
+    border: none;
+    background-color: rgb(240, 164, 0);
+    padding: 0.2em .5em 0.2em 0.5em;
+    border-radius: 30px;
+    color: white;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.45);
+    cursor: pointer;
+}
+
+.movement-left{
+    /* transform: translate(-5em, 0); */
+    position:absolute;
+    left: 300px;
+    transform: scale(1.3);
+}
+.movement-right{
+    /* transform: translate(-5em, 0); */
+    position:absolute;
+    right: 300px;
+    transform: scale(1.3);
+}
+
+.choices{
+    margin-top: 2.5em;
+    width: 100%;
+    padding: 0 9em 0 9.9em;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.616);
+}
+
+
+.restart-btn:hover{
+    transform: scale(.98);
+}
+
+.restart-btn:active{
+    transform: scale(.99);
+    background-color: rgb(209, 143, 0);
+}
